@@ -1,15 +1,16 @@
 Test task
 =========
 
-First (simple test)
+First (test)
 -------------------
 Test run command:
 `pytest -m 'first and wiki'`
 
-Second (OOP)
-------------
+Second (OOP + unit tests)
+-------------------------
 Test run command: `pytest -m second`
 
 Third (algorithm)
 -----------------
-main.py
+`./third/main.py` is entrypoint
+
