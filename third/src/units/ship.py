@@ -18,18 +18,22 @@ class Ship:
     def move_top(self):
         node = Coordinates(self.position.x, self.position.y + 1)
         self.move(node)
+        print(f"move top, coordinates: {node}")
 
     def move_bottom(self):
         node = Coordinates(self.position.x, self.position.y - 1)
         self.move(node)
+        print(f"move bottom, coordinates: {node}")
 
     def move_left(self):
         node = Coordinates(self.position.x - 1, self.position.y)
         self.move(node)
+        print(f"move left, coordinates: {node}")
 
     def move_right(self):
         node = Coordinates(self.position.x + 1, self.position.y)
         self.move(node)
+        print(f"move right, coordinates: {node}")
 
     def navigate(self, path: list[Coordinates]):
         for node in path:
