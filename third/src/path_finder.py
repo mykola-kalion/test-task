@@ -29,6 +29,9 @@ def find_path(_map: Map, start: Coordinates, destination: Coordinates):
                 queue.put(next_node, priority)
                 came_from[next_node] = current
 
+    if destination not in came_from.keys():
+        raise Exception("Destination is not reachable")
+
     return came_from
 
 
