@@ -2,7 +2,7 @@ import dataclasses
 
 
 @dataclasses.dataclass
-class SitesToLanguagesPopularityStatistics:
+class SitesToLanguagesPopularity:
     website: str
     popularity: int
     front_end: list[str]

@@ -14,7 +14,7 @@ def context():
 
 
 @pytest.fixture(scope='session')
-def page(context):
+def sites_to_programming_languages_page(context):
     page = context.new_page()
     url = get_url(WikiPages.SITES_TO_PROGRAMMING_LANGUAGES)
     page.goto(url)
