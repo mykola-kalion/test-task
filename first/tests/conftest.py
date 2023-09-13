@@ -1,7 +1,8 @@
-from playwright.sync_api import sync_playwright, Page
+from playwright.sync_api import sync_playwright
 import pytest
 
-from first.src.pages.article import ArticleTable
+from first.config import get_url
+from first.src.pages.pages_urls import WikiPages
 
 
 @pytest.fixture(scope='session')
@@ -15,6 +16,7 @@ def context():
 @pytest.fixture(scope='session')
 def page(context):
     page = context.new_page()
-    page.goto("https://en.wikipedia.org/wiki/Programming_languages_used_in_most_popular_websites")
+    url = get_url(WikiPages.SITES_TO_PROGRAMMING_LANGUAGES)
+    page.goto(url)
     yield page
     page.close()
