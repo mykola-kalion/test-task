@@ -1,5 +1,5 @@
 from third.src.map.map import Map
-from third.src.search import find_path, reconstruct_path
+from third.src.path_finder import find_path, reconstruct_path
 
 _map = Map(10, 10)
 _map.generate_obstructions()

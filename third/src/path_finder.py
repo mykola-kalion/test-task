@@ -3,7 +3,7 @@ from third.src.map.coordinates import Coordinates
 from third.src.map.map import Map
 
 
-def range_to_goal(a, b):
+def range_to_destination(a, b):
     (x1, y1) = a.x, a.y
     (x2, y2) = b.x, b.y
     return abs(x1 - x2) + abs(y1 - y2)
@@ -25,7 +25,7 @@ def find_path(_map: Map, start: Coordinates, destination: Coordinates):
             new_cost = cost_so_far[current] + 1
             if next_node not in cost_so_far or new_cost < cost_so_far[next_node]:
                 cost_so_far[next_node] = new_cost
-                priority = new_cost + range_to_goal(destination, next_node)
+                priority = new_cost + range_to_destination(destination, next_node)
                 queue.put(next_node, priority)
                 came_from[next_node] = current
 
